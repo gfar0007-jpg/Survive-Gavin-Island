@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Survive Gavin Island</title>
+<meta name="description" content="Survive Gavin Island is a block-building survival adventure made by Dad & Gavin. Download it free for Windows.">
+<meta name="theme-color" content="#0b0d12">
+<meta name="copyright" content="GavinIsland">
+<meta name="author" content="Dad &amp; Gavin">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:image" content="img/icon.png">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<canvas id="stars" aria-hidden="true"></canvas>
+<a class="skip" href="#story">Skip to content</a>
+<div id="demoBar" class="demobar" hidden>Demo mode: chat and tickets only work on this one computer until the site owner finishes the Firebase setup (see SETUP.md).</div>
+
+<header class="nav">
+  <a class="brand" href="#top"><img class="brandMark" src="img/favicon-32.png" alt="" width="26" height="26">Survive <b>Gavin</b> Island</a>
+  <nav class="links" aria-label="Sections">
+    <a href="#story">Our story</a>
+    <a href="#gallery">Then and now</a>
+    <a href="#updates">Updates</a>
+    <a href="#download">Download</a>
+    <a href="#support">Support &amp; ideas</a>
+  </nav>
+  <a class="btn small green" href="#download" id="navPlay">Download</a>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="heroBg" role="img" aria-label="Screenshot of the game: a wooden house with a door beside a grassy field"></div>
+  <div class="wrap heroIn">
+    <p class="pill">BETA &middot; free to play</p>
+    <h1>Survive <span>Gavin</span> Island</h1>
+    <p class="lead">A block-building survival adventure. Gather, craft, build a home, tame the night, and train your skills. Made by Dad &amp; Gavin.</p>
+    <div class="heroBtns">
+      <a class="btn big green" href="#download" id="heroPlay">Download for Windows</a>
+      <a class="btn big ghost" href="play/">Play in your browser</a>
+      <a class="btn big ghost" href="#story">How it started</a>
+    </div>
+    <p class="heroNote">Free Windows download, or play right in your browser on a computer. No sign-up needed.</p>
+  </div>
+</section>
+
+<section class="wrap shots" aria-label="Screenshots">
+  <figure><img src="img/door.jpg" alt="A wooden house with a two-block-tall door" loading="lazy" width="900" height="576"><figcaption>Build anywhere, with real doors</figcaption></figure>
+  <figure><img src="img/animals.jpg" alt="A herd of cows, goats, boars and deer in many colours" loading="lazy" width="900" height="573"><figcaption>A living island of animals</figcaption></figure>
+  <figure><img src="img/crafting.jpg" alt="The crafting grid and recipe book" loading="lazy" width="900" height="691"><figcaption>Crafting grid and recipe book</figcaption></figure>
+  <figure><img src="img/combat.jpg" alt="Fighting a monster with hit splats and chat above the action" loading="lazy" width="900" height="573"><figcaption>RuneScape-style combat and hit splats</figcaption></figure>
+</section>
+
+<section id="story" class="wrap sec">
+  <h2>How it started</h2>
+  <div class="story">
+    <div class="storyCol">
+      <div class="note storyText">
+        <p class="kick">It all began a day before Gavin&rsquo;s birthday.</p>
+        <p>Gavin came to me and said he wanted to make a game. He loves Minecraft, and I grew up playing Old School RuneScape, so we sat down together, put both lists of ideas on the table, and turned them into one world with a bit of both.</p>
+        <p>We made the 3D models in <b>Blender</b> and <b>Metasequoia 5</b>, put together the game&rsquo;s data files with a <b>.dat maker</b>, and wrote the code in <b>IntelliJ</b> with <b>Java</b>. The version you can download today is written in <b>JavaScript</b> and <b>three.js</b>. We work on it side by side, and every so often we sit down and hunt for bugs together.</p>
+        <p>Watching Gavin&rsquo;s ideas show up on screen has been the best part for me. We&rsquo;re still adding things and making it better, so please bear with us. It&rsquo;s still in beta and it isn&rsquo;t finished yet. Thanks for playing!</p>
+        <p class="sign">&mdash; Dad &amp; Gavin</p>
+      </div>
+    </div>
+    <aside class="tools" aria-label="What we build it with">
+      <h3>What we build it with</h3>
+      <ul>
+        <li><b>Blender</b><span>3D models</span></li>
+        <li><b>Metasequoia 5</b><span>3D models</span></li>
+        <li><b>.dat maker</b><span>game data files</span></li>
+        <li><b>IntelliJ IDEA</b><span>writing the code</span></li>
+        <li><b>Java</b><span>where it began</span></li>
+        <li><b>JavaScript</b><span>the browser game</span></li>
+        <li><b>three.js</b><span>3D in the browser</span></li>
+        <li><b>HTML5</b><span>runs anywhere</span></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section id="gallery" class="wrap sec">
+  <h2>Then and now</h2>
+  <p class="sub">Pictures from our early builds next to how the same things look today. Pick a tab.</p>
+  <div class="tabs" role="tablist" id="galTabs" aria-label="Then and now topics"></div>
+  <div id="galPane"></div>
+</section>
+
+<section id="updates" class="wrap sec">
+  <h2>Updates</h2>
+  <p class="sub">Everything we&rsquo;ve added since day one, newest first.</p>
+  <div class="tabs" role="tablist"><button type="button" role="tab" class="tab on" id="tabNew" aria-selected="true">What&rsquo;s new</button><button type="button" role="tab" class="tab" id="tabBugs" aria-selected="false">Bugs and fixes</button></div>
+  <div id="updatePane">
+    <div id="updateList" class="timeline"></div>
+    <button class="btn ghost" id="moreUpdates" type="button" hidden>Show older updates</button>
+  </div>
+  <div id="bugList" class="bugs" hidden></div>
+</section>
+
+<section id="download" class="wrap sec dlSec">
+  <p class="dlEyebrow">Download</p>
+  <h2>Start your adventure</h2>
+  <p class="sub">Download the setup file and survive Gavin Island, no internet needed. Windows 10 or 11 only for now.</p>
+  <div class="dlGrid">
+    <div class="dlCard">
+      <p class="dlOs">Windows</p>
+      <h3 class="dlName">Windows</h3>
+      <p class="dlVer" id="dlVer">&nbsp;</p>
+      <a class="dlBtn" id="dlBtn" href="#" download>Download</a>
+      <p class="dlMeta">Installer &middot; 64-bit &middot; 119 MB</p>
+    </div>
+  </div>
+  <div class="cols dlHelp">
+    <div class="box">
+      <h3>How to install</h3>
+      <p>Download the setup file and double-click it. A setup wizard shows you what you are installing, asks you to accept the agreement, and does the rest. There is nothing to unzip. The game runs without internet.</p>
+    </div>
+    <div class="box">
+      <h3>Windows says &ldquo;protected your PC&rdquo;?</h3>
+      <p>That is normal for small homemade apps. Click <b>More info</b>, then <b>Run anyway</b>.</p>
+    </div>
+    <div class="box">
+      <h3>Controls</h3>
+      <ul class="ctl">
+        <li><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> move &middot; <kbd>Space</kbd> jump &middot; <kbd>Shift</kbd> sprint</li>
+        <li>Mouse to look &middot; left click break or attack &middot; right click place or use</li>
+        <li><kbd>E</kbd> talk or use &middot; <kbd>Tab</kbd> backpack and crafting &middot; <kbd>T</kbd> chat</li>
+        <li><kbd>K</kbd> skills &middot; <kbd>J</kbd> quests &middot; <kbd>N</kbd> creatures &middot; <kbd>P</kbd> settings</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="support" class="wrap sec">
+  <h2>Support &amp; ideas</h2>
+  <p class="sub">Found a bug? Have an idea for something Gavin and Dad should add? Tell us here. We read every ticket.</p>
+
+  <div class="cols tickets">
+    <form class="box" id="ticketForm" autocomplete="off">
+      <h3>New ticket</h3>
+      <div id="ticketGate" class="gate" hidden>
+        <p>Please sign in to send a ticket. It only takes a name and a password.</p>
+        <button class="btn" type="button" data-open-chat>Sign in or create account</button>
+      </div>
+      <fieldset id="ticketFields">
+        <label>What is it?
+          <select id="tKind"><option value="bug">A bug (something is broken)</option><option value="idea">An idea (add this!)</option><option value="other">Something else</option></select>
+        </label>
+        <label>Short title
+          <input id="tTitle" maxlength="80" placeholder="e.g. Doors disappear when I log back in" required>
+        </label>
+        <label>Tell us more
+          <textarea id="tBody" rows="5" maxlength="2000" placeholder="What happened? What did you expect? For a bug: what were you doing just before?" required></textarea>
+        </label>
+        <label>Screenshot <span class="opt">(optional)</span>
+          <input id="tShot" type="file" accept="image/png,image/jpeg,image/webp">
+        </label>
+        <p class="small">Please leave out web links and personal details such as your address or phone number.</p>
+        <p class="err" id="tErr" role="alert"></p>
+        <button class="btn green" id="tSend" type="submit">Send ticket</button>
+      </fieldset>
+    </form>
+
+    <div class="box">
+      <div class="boardHead">
+        <h3>The board</h3>
+        <div class="chips" id="tFilters" role="group" aria-label="Filter tickets">
+          <button type="button" class="chip on" data-f="all">All</button>
+          <button type="button" class="chip" data-f="bug">Bugs</button>
+          <button type="button" class="chip" data-f="idea">Ideas</button>
+          <button type="button" class="chip" data-f="planned">Planned</button>
+          <button type="button" class="chip" data-f="done">Done</button>
+        </div>
+      </div>
+      <div id="adminBar" class="adminBar" hidden>
+        <button class="btn small ghost" id="copyTickets" type="button">Copy open tickets as a to-do list</button>
+        <span class="small" id="copyMsg"></span>
+      </div>
+      <div id="boardMsg" class="small"></div>
+      <ul id="ticketList" class="ticketList"></ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>Made with love by Dad &amp; Gavin. Survive Gavin Island is in beta, so things will change.</p>
+    <p class="copy">&copy; 2026 GavinIsland&trade;. All rights reserved. Please don&rsquo;t copy, re-upload or sell the game, its art or its code.</p>
+    <p class="small">Chat is family-friendly: no web links, no personal details, and staff can remove messages and accounts.</p>
+  </div>
+</footer>
+
+<!-- ============ chat bubble ============ -->
+<button class="fab" id="chatFab" type="button" aria-label="Open chat" aria-expanded="false" aria-controls="chatPanel">
+  <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/></svg>
+  <span class="dot" id="chatDot" hidden></span>
+</button>
+
+<aside class="chat" id="chatPanel" role="dialog" aria-label="Chat" hidden>
+  <header class="chatHead">
+    <div><b>Island chat</b><span class="small" id="chatWho"></span></div>
+    <div class="chatBtns">
+      <button type="button" class="iconBtn" id="adminBtn" title="Staff tools" aria-label="Staff tools" hidden>&#x1F6E1;&#xFE0F;</button>
+      <button type="button" class="btn small ghost" id="outBtn" hidden>Sign out</button>
+      <button type="button" class="iconBtn" id="chatClose" title="Close" aria-label="Close chat">&times;</button>
+    </div>
+  </header>
+
+  <div class="chatAuth" id="chatAuth">
+    <div class="tabs" role="tablist">
+      <button type="button" role="tab" class="tab on" id="tabIn" aria-selected="true">Sign in</button>
+      <button type="button" role="tab" class="tab" id="tabUp" aria-selected="false">Create account</button>
+    </div>
+    <form id="authForm" autocomplete="on">
+      <label>Player name
+        <input id="aName" name="username" autocomplete="username" maxlength="16" placeholder="3 to 16 letters or numbers" autocapitalize="off" spellcheck="false" required>
+      </label>
+      <label>Password
+        <input id="aPass" name="password" type="password" autocomplete="current-password" minlength="6" placeholder="At least 6 characters" required>
+      </label>
+      <p class="small" id="authHelp">Use a made-up name, not your real name. There&rsquo;s no email, so <b>write your password down</b>: it can&rsquo;t be reset.</p>
+      <p class="err" id="aErr" role="alert"></p>
+      <button class="btn green wide" id="aGo" type="submit">Sign in</button>
+    </form>
+    <ul class="rules small">
+      <li>Be kind. No bad words.</li>
+      <li>No web links, and never share your address, phone, school or other apps.</li>
+      <li>Tap the flag to report a message. Staff can remove messages and accounts.</li>
+    </ul>
+  </div>
+
+  <div class="chatMain" id="chatMain" hidden>
+    <div class="msgs" id="msgs" aria-live="polite"></div>
+    <div class="emojiPick" id="emojiPick" hidden></div>
+    <form class="composer" id="composer" autocomplete="off">
+      <button type="button" class="iconBtn" id="emojiBtn" aria-label="Emoji" aria-expanded="false">&#x1F642;</button>
+      <input id="mText" maxlength="200" placeholder="Say something nice..." aria-label="Message">
+      <button class="btn small green" type="submit" id="mSend">Send</button>
+    </form>
+    <p class="err" id="mErr" role="alert"></p>
+  </div>
+</aside>
+
+<!-- ============ staff tools ============ -->
+<div class="modal" id="adminModal" role="dialog" aria-label="Staff tools" hidden>
+  <div class="modalBox">
+    <header class="chatHead"><b>Staff tools</b><button type="button" class="iconBtn" id="adminClose" aria-label="Close">&times;</button></header>
+    <div class="tabs"><button class="tab on" id="aTabRep" type="button">Reports <span id="repCount"></span></button><button class="tab" id="aTabPl" type="button">Players</button></div>
+    <div id="adminBody" class="adminBody"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script src="firebase-config.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="updates-data.js"></script>
+<script src="bugs-data.js"></script>
+<script src="bugs-render.js"></script>
+<script src="gallery-data.js"></script>
+<script src="gallery-render.js"></script>
+<script src="backend.js"></script>
+<script src="filter.js"></script>
+<script src="stars.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
