@@ -8,4 +8,4 @@ window.SGI_FIREBASE = {
 };
 
 /* Link for the Windows download button (SETUP.md, step 6). */
-window.SGI_DOWNLOAD_URL = "https://github.com/gfar0007-jpg/survive-gavin-island/releases/latest/download/SurviveGavinIsland-Setup.exe";
+window.SGI_DOWNLOAD_URL = "https://github.com/gfar0007-jpg/Survive-Gavin-Island/releases/latest";
